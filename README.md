@@ -74,6 +74,3 @@ You can test the API locally using curl or a tool like Postman.
 ### Example Commands
 1. Process a Receipt: `curl -X POST http://localhost:8080/receipts/process -H "Content-Type: application/json" -d '{ "retailer": "Target", "purchaseDate": "2022-01-01", "purchaseTime": "13:01", "items": [ { "shortDescription": "Mountain Dew 12PK", "price": "6.49" }, { "shortDescription": "Emils Cheese Pizza", "price": "12.25" } ], "total": "35.35" }'`
 2. Get Points for a Receipt: `curl -X GET http://localhost:8080/receipts/{id}/points` Replace `{id}` with the actual ID returned from the POST request.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
