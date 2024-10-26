@@ -12,7 +12,9 @@ A RESTful API service built in Go to process and score retail receipts based on 
   - Endpoints
   - Examples
 - Scoring Rules
+- Docker Setup
 - Testing
+- License
 
 ## Project Overview
 The Receipt Processor API provides an interface for submitting retail receipts, calculating points based on defined criteria, and retrieving the score of each receipt. Each receipt is given a unique ID upon submission, which can later be used to retrieve its associated score.
@@ -27,6 +29,7 @@ The Receipt Processor API provides an interface for submitting retail receipts, 
 ### Prerequisites
 - Go (version 1.18 or later)
 - Git (for cloning the repository)
+- Docker (optional, for running in a container)
 
 ### Installation
 1. Clone the Repository: `git clone https://github.com/your-username/receipt-processor.git` then `cd receipt-processor`
@@ -66,6 +69,13 @@ The following rules are used to calculate points for each receipt:
 5. Item Description Length: For items with a description length that is a multiple of 3, multiply the item's price by 0.2 and round up. This result is the number of points earned.
 6. Odd Purchase Day: 6 points if the day in the purchase date is odd.
 7. Purchase Time: 10 points if the purchase time is between 2:00 pm and 4:00 pm.
+
+## Docker Setup
+To make it easy to run the Receipt Processor in a consistent environment, you can use Docker.
+
+### Steps
+1. Build the Docker Image: In the root directory of the project, run `docker build -t receipt-processor .`
+2. Run the Docker Container: Run `docker run -p 8080:8080 receipt-processor` The application will be available at http://localhost:8080.
 
 ## Testing
 You can test the API locally using curl or a tool like Postman.
