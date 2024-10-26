@@ -13,7 +13,6 @@ A RESTful API service built in Go to process and score retail receipts based on 
   - Examples
 - Scoring Rules
 - Testing
-- License
 
 ## Project Overview
 The Receipt Processor API provides an interface for submitting retail receipts, calculating points based on defined criteria, and retrieving the score of each receipt. Each receipt is given a unique ID upon submission, which can later be used to retrieve its associated score.
