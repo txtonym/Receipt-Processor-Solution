@@ -32,7 +32,7 @@ The Receipt Processor API provides an interface for submitting retail receipts, 
 - Docker (optional, for running in a container)
 
 ### Installation
-1. Clone the Repository: `git clone https://github.com/your-username/receipt-processor.git` then `cd receipt-processor`
+1. Clone the Repository: `git clone https://github.com/txtonym/Receipt-Processor-Solution` then `cd Receipt-Processor-Solution`
 2. Install Dependencies: `go mod download`
 3. Run the Server: `go run .` The server will start on http://localhost:8080.
 
